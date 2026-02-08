@@ -1,0 +1,184 @@
+:root{
+  --bg-primary: #1f2125;
+  --bg-secondary: #161a20;
+  --surface: #1e232b;
+  --border: #2a2f38;
+  --text-primary: #e6e8eb;
+  --text-secondary: #a8adb7;
+  --hint: #6b757b;
+  --icons: #5f7cff;
+  --accent-1: #3b79ee;
+  --accent-2: #3fb835;
+  --accent-3: #8b28f6;
+  --accent-4: #f9284b;
+  --accent-5: #fd6547;
+  --accent-6: #5d9fff;
+  --accent-7: #5de84b;
+  --accent-8: #6d23d4;
+  --accent-9: #ffb355;
+  --accent-10: #f6e657;
+  --accent-11: #3d4c6f;
+  --accent-12: #4d7c6f;
+  --accent-13: #6b25a4;
+  --accent-14: #8b254b;
+  --accent-15: #9f3b24;
+  --danger: #fa534b;
+  --warning: #ffe355;
+  --success: #5bb43b;
+  --info: #3a96e6;
+  --selection-glow: #c7cbd499;
+  --hover-overlay: #5f656a6a;
+  --active-tool-bg: #242A3c;
+}
+
+@font-face {
+    font-family: 'Nunito.ttf';
+    src: url('./assets/Nunito.ttf') format('truetype');
+}
+
+* {
+    font-family: 'Nunito.ttf';
+    color: var(--text-primary);
+    text-shadow: var(--text-secondary) 0px 0px 2.3px;
+}
+.hidden {
+    display: none !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+}
+.buttonRed{
+    background-color: var(--accent-4);
+    border: 1px ridge #f6e6576a;
+    border-radius: 4.6px;
+    box-shadow: 0px 2.3px 0px var(--accent-14);
+    cursor: pointer;
+    transition: ease-in-out 0.2s;
+}
+.buttonYellow{
+    background-color: var(--accent-9);
+    border: 1px ridge #f6e6576a;
+    border-radius: 4.6px;
+    box-shadow: 0px 2.3px 0px var(--accent-5);
+    cursor: pointer;
+    transition: ease-in-out 0.2s;
+}
+.buttonBlue{
+    background-color: var(--accent-6);
+    border: 1px ridge #f6e6576a;
+    border-radius: 4.6px;
+    box-shadow: 0px 2.3px 0px var(--accent-1);
+    cursor: pointer;
+    transition: ease-in-out 0.2s;
+}
+.buttonRed:hover, .buttonYellow:hover, .buttonBlue:hover{
+    transition: ease-in-out 0.2s;
+    filter: saturate(110%) brightness(115%);
+    border-color: var(--hover-overlay);
+}
+.buttonRed:active, .buttonYellow:active, .buttonBlue:active{
+    transition: ease-in-out 0.2s;
+    filter: saturate(30%) brightness(20%);
+    transform: translateY(3.8px) scale(98%, 96%);
+    box-shadow: 0px 0px 0px #00000000;
+}
+
+bn{
+    width: 78px;
+    height: 30px;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+}
+row{
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, 0) scale(130%);
+    width: 300px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    align-items: center;
+    flex-direction: row;
+    z-index: 3;
+}
+
+background{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0deg, var(--bg-secondary), var(--bg-primary));
+    z-index: -10;
+}
+header {
+    position: absolute;
+    top: 3%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 40%;
+    height: 38%;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    align-items: center;
+    flex-direction: column;
+
+    img{
+        position: absolute;
+        top: -13%;
+        left: 50%;
+        transform: translate(-50%, 0);
+        height: 200px;
+        width: 200px;
+        border-radius: 20px;
+        border: solid var(--BG) 2.7px;
+        box-shadow: var(--pageBG) 0px 3px 0px -0.5px;}
+    h1{
+        position: absolute;
+        bottom: 10px;
+        left: 50%; 
+        transform: translate(-50%, 0);
+        font-size: 2.8rem;
+    }
+} 
+
+form{
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+}
+box{
+    width: 100%;
+    height: 100%;
+    scale:100%;
+    overflow: hidden;
+    border-radius: 40px;
+}
+iframe{
+    scale:140%;
+    width: 100%;
+    height: 130%;
+    transform:translate(0, -19%);
+    filter: hue-rotate(220deg) invert() saturate(140%);
+}
+layer{
+    border-radius: 10px;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    filter:blur(60px);
+    background-color: var(--accent-1);
+    z-index: -1;
+}
